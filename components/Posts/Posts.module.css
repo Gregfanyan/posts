@@ -1,0 +1,8 @@
+.posts {
+  padding-top: 50px;
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  grid-gap: 10px;
+}
