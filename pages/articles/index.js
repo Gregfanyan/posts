@@ -2,12 +2,13 @@ import { Fragment } from "react";
 
 import Meta from "../../components/Meta";
 import { server } from "../../config";
+import ArticleList from "../../components/ArticleList";
 
 function Articles({ articles }) {
   return (
     <Fragment>
       <Meta title="Article Page" />
-      <div>Articles</div>
+      <ArticleList articles={articles} />
     </Fragment>
   );
 }
