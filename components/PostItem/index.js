@@ -1,12 +1,14 @@
 import { Fragment } from "react";
+import Link from "next/link";
 
 function PostItem({ post }) {
-  console.log(post);
   return (
-    <Fragment>
-      <h1>{post.title}</h1>
-      <p>{post.body}</p>
-    </Fragment>
+    <Link href="/[id]" as={`/${post.id}`}>
+      <a>
+        <h1>{post.title}</h1>
+        <p>{post.body}</p>
+      </a>
+    </Link>
   );
 }
 
