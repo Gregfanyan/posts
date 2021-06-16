@@ -1,10 +1,9 @@
 import { Fragment } from "react";
 
 import Meta from "../../components/Meta";
-import articles from "../articles";
+import { server } from "../../config";
 
-function Articles() {
-  console.log(articles);
+function Articles({ articles }) {
   return (
     <Fragment>
       <Meta title="Article Page" />
@@ -12,5 +11,16 @@ function Articles() {
     </Fragment>
   );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch(`${server}/api/article`);
+
+  const articles = await res.json();
+  return {
+    props: {
+      articles,
+    },
+  };
+};
 
 export default Articles;
