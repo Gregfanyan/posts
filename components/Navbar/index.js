@@ -7,10 +7,10 @@ function Navbar() {
     <header className={styles.header}>
       <ul>
         <li>
-          <Link href="/">home</Link>
+          <Link href="/">posts</Link>
         </li>
         <li>
-          <Link href="/about">about</Link>
+          <Link href="/articles">articles</Link>
         </li>
         <li>
           <Link href="/new-posts">add new post</Link>
