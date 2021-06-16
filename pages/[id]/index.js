@@ -2,10 +2,12 @@ import { Fragment } from "react";
 
 import SinglePost from "../../components/SinglePost";
 import styles from "./Post.module.css";
+import Meta from "../../components/Meta";
 
 function Post({ post }) {
   return (
     <div className={styles.container}>
+      <Meta title={post.title} />
       <SinglePost post={post} />
     </div>
   );

@@ -1,5 +1,14 @@
+import { Fragment } from "react";
+
+import Meta from "../../components/Meta";
+
 function About() {
-  return <div>about</div>;
+  return (
+    <Fragment>
+      <Meta title='About Page' />
+      <div>about</div>
+    </Fragment>
+  );
 }
 
 export default About;

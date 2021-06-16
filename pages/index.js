@@ -1,10 +1,12 @@
 import { Fragment } from "react";
 
+import Meta from "../components/Meta";
 import Posts from "../components/Posts";
 
 export default function Home({ posts }) {
   return (
     <Fragment>
+      <Meta />
       <Posts posts={posts} />
     </Fragment>
   );
