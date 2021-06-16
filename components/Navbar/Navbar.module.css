@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: black;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  list-style: none;
+}
+
+.header ul li {
+  margin-right: 15px;
+  color: aliceblue;
+  text-transform: uppercase;
+}
+
+.header ul li:hover {
+  color: aquamarine;
+}
