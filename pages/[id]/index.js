@@ -1,30 +1,27 @@
-function Post({ posts }) {
-  return <div>{posts.title}</div>;
+import { Fragment } from "react";
+
+import SinglePost from "../../components/SinglePost";
+import styles from "./Post.module.css";
+
+function Post({ post }) {
+  return (
+    <div className={styles.container}>
+      <SinglePost post={post} />
+    </div>
+  );
 }
 
 export const getStaticProps = async (context) => {
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
   );
-  const posts = await res.json();
+  const post = await res.json();
   return {
     props: {
-      posts,
+      post,
     },
   };
 };
-
-/* export const getStaticProps = async (context) => {
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
-  );
-  const posts = await res.json();
-  return {
-    props: {
-      posts,
-    },
-  };
-}; */
 
 export const getStaticPaths = async () => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
