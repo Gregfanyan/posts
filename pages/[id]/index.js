@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import SinglePost from "../../components/SinglePost";
 import styles from "./Post.module.css";
 import Meta from "../../components/Meta";
+import { server } from "../../config";
 
 function Post({ post }) {
   return (
@@ -14,9 +15,7 @@ function Post({ post }) {
 }
 
 export const getStaticProps = async (context) => {
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
-  );
+  const res = await fetch(`${server}/api/article/${context.params.id}`);
   const post = await res.json();
   return {
     props: {
@@ -26,7 +25,7 @@ export const getStaticProps = async (context) => {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+  const res = await fetch(`${server}/api/article`);
   const posts = await res.json();
 
   const ids = posts.map((post) => post.id);
