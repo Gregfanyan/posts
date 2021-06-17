@@ -2,6 +2,7 @@ import { Fragment } from "react";
 
 import Meta from "../components/Meta";
 import Posts from "../components/Posts";
+import { server } from "../config";
 
 export default function Home({ posts }) {
   return (
