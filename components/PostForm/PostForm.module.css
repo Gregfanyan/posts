@@ -1,0 +1,49 @@
+.formSection input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.button {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: medium;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.button:hover {
+  background-color: rgb(85, 99, 94);
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 2rem 15rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: rgb(85, 99, 94);
+}
+
+.formSection label {
+  color: rgb(85, 99, 94);
+  text-transform: capitalize;
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
+}
