@@ -1,7 +1,7 @@
 .container {
   margin-bottom: 10px;
   max-height: 320px;
-  max-width: 500px;
+  max-width: 90%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   overflow: auto;
 }
@@ -26,3 +26,4 @@
   color: #0070f3;
   border-color: #0070f3;
 }
+
