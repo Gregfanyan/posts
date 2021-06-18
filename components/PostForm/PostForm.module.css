@@ -39,6 +39,8 @@
   text-transform: capitalize;
   font-weight: bold;
   color: rgb(85, 99, 94);
+  margin: 0;
+  padding: 8px 0;
 }
 
 .formSection label {
