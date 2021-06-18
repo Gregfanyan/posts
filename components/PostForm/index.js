@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 
 import styles from "./PostForm.module.css";
 
-function PostForm() {
+function PostForm({ onAddPostHandler }) {
   const [post, setPost] = useState({
     title: "",
     image: "",
@@ -27,6 +27,8 @@ function PostForm() {
       image: image,
       description: description,
     };
+
+    onAddPostHandler(newPost);
   };
 
   return (

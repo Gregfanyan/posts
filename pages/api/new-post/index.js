@@ -8,7 +8,7 @@ async function handler(req, res) {
       useUnifiedTopology: true,
     });
     const db = client.db();
-    const meetupCollection = db.collection("tests");
+    const meetupCollection = db.collection("post");
     const result = await meetupCollection.insertOne(data);
 
     client.close();
