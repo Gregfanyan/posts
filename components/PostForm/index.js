@@ -1,20 +1,67 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 import styles from "./PostForm.module.css";
 
 function PostForm() {
+  const [post, setPost] = useState({
+    title: "",
+    image: "",
+    description: "",
+  });
+
+  const { title, image, description } = post;
+
+  const onChange = (e) => {
+    let { name, value } = e.currentTarget;
+    setPost({
+      ...post,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newPost = {
+      title: title,
+      image: image,
+      description: description,
+    };
+  };
+
   return (
     <Fragment>
       <h1 className={styles.title}>add new post</h1>
       <div className={styles.container}>
-        <form className={styles.formSection}>
+        <form className={styles.formSection} onSubmit={handleSubmit}>
           <label>title</label>
-          <input placeholder="Add Title" type="text" />
+          <input
+            placeholder=" Title"
+            type="text"
+            onChange={onChange}
+            value={title}
+            name="title"
+          />
           <label placeholder="">image</label>
-          <input placeholder="Add Image Link" type="text" />
+          <input
+            placeholder=" Image Link"
+            type="text"
+            onChange={onChange}
+            value={image}
+            name="image"
+          />
           <label>description</label>
-          <input placeholder="Add Description" type="text" />
-          <button className={styles.button}>Submit</button>
+          <input
+            placeholder=" Description"
+            type="text"
+            onChange={onChange}
+            value={description}
+            name="description"
+          />
+
+          <button type="submit" className={styles.button}>
+            Submit
+          </button>
         </form>
       </div>
     </Fragment>
