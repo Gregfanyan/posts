@@ -1,14 +1,14 @@
 import PostItem from "../PostItem";
 
-import styles from "./Posts.module.css";
+import Container from "../Container";
 
 function Posts({ posts }) {
   return (
-    <div className={styles.posts}>
+    <Container>
       {posts.map((post) => (
         <PostItem key={post.id} post={post} />
       ))}
-    </div>
+    </Container>
   );
 }
 

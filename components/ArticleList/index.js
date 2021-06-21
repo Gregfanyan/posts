@@ -1,13 +1,13 @@
 import ArticleItem from "../ArticleItem";
-import styles from "../Posts/Posts.module.css";
+import Container from "../Container";
 
 function ArticleList({ articles }) {
   return (
-    <div className={styles.posts}>
+    <Container>
       {articles.map((article) => (
         <ArticleItem key={article.id} article={article} />
       ))}
-    </div>
+    </Container>
   );
 }
 
