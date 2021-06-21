@@ -1,8 +1,7 @@
 import { MongoClient, ObjectId } from "mongodb";
 
 function SinglePost({ postData }) {
-  console.log(postData);
-  return <div></div>;
+  return <div>{postData.description}</div>;
 }
 
 export const getStaticPaths = async () => {
@@ -20,14 +19,14 @@ export const getStaticPaths = async () => {
     fallback: "blocking",
     paths: posts.map((post) => ({
       params: {
-        postid: post._id.toString(),
+        postId: post._id.toString(),
       },
     })),
   };
 };
 
 export const getStaticProps = async (context) => {
-  const postId = context.params.meetupid;
+  const postId = context.params.postId;
 
   const client = await MongoClient.connect(process.env.MONGODB_URI, {
     useUnifiedTopology: true,

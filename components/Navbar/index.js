@@ -13,7 +13,10 @@ function Navbar() {
           <Link href="/articles">articles</Link>
         </li>
         <li>
-          <Link href="/new-posts">add new post</Link>
+          <Link href="/new-post">latest posts</Link>
+        </li>
+        <li>
+          <Link href="/add-posts">add new post</Link>
         </li>
       </ul>
     </header>

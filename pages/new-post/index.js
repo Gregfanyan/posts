@@ -1,12 +1,11 @@
 import { MongoClient } from "mongodb";
 
+import NewPostList from "../../components/NewPostList";
+
 function PostedData({ posts }) {
-  console.log(posts);
   return (
     <>
-      {posts.map((post) => (
-        <h1 key={post.id}>{post.title}</h1>
-      ))}
+      <NewPostList posts={posts} />
     </>
   );
 }
