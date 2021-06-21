@@ -5,7 +5,7 @@ import Meta from "../../components/Meta";
 import PostForm from "../../components/PostForm";
 import styles from "./NewPost.module.css";
 
-function NewPosts() {
+function AddPosts() {
   const router = useRouter();
 
   async function onAddPostHandler(entereData) {
@@ -32,4 +32,4 @@ function NewPosts() {
   );
 }
 
-export default NewPosts;
+export default AddPosts;
