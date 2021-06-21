@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { Fragment } from "react";
 
-import styles from "../PostItem/PostItem.module.css";
+import Card from "../Card";
 
 function ArticleItem({ article }) {
   return (
-    <Link href="/article/[id]" as={`/article/${article.id}`}>
-      <a className={styles.container}>
+    <Link href={`/article/${article.id}`} passHref>
+      <Card>
         <h1>{article.title} &rarr;</h1>
         <p>{article.body}</p>
-      </a>
+      </Card>
     </Link>
   );
 }

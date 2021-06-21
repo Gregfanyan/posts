@@ -4,7 +4,7 @@ function NewPostList({ posts }) {
   return (
     <>
       {posts.map((post) => (
-        <NewPostItem post={post} />
+        <NewPostItem post={post} key={post.id} />
       ))}
     </>
   );
