@@ -1,19 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "../PostItem/PostItem.module.css";
-
 function NewPostItem({ post }) {
   return (
-    <Link href="/post/[id]" as={`/post/${post.id}`} key={post.id}>
-      <a className={styles.container}>
-        <h1>{post.title} &rarr;</h1>
-        <Image
-          src={post.image}
-          alt="Picture of the author"
-          width={500}
-          height={500}
-        />
+    <Link href={`/post/${post.id}`} key={post.id}>
+      <a>
+        <h1>{post.title}</h1>
+        <Image src={post.image} alt="Post images" width={400} height={400} />
         <p>{post.description}</p>
       </a>
     </Link>
