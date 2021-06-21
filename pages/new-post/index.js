@@ -26,6 +26,7 @@ export const getStaticProps = async () => {
       posts: posts.map((post) => ({
         title: post.title,
         image: post.image,
+        description: post.description,
         id: post._id.toString(),
       })),
     },
