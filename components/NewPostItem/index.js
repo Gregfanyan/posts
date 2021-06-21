@@ -3,15 +3,10 @@ import Image from "next/image";
 
 function NewPostItem({ post }) {
   return (
-    <Link href="/post/[id]" as={`/post/${post.id}`} key={post.id}>
+    <Link href={`/post/${post.id}`} key={post.id}>
       <a>
-        <h1>{post.title} &rarr;</h1>
-        <Image
-          src={post.image}
-          alt="Picture of the author"
-          width={500}
-          height={500}
-        />
+        <h1>{post.title}</h1>
+        <Image src={post.image} alt="Post images" width={400} height={400} />
         <p>{post.description}</p>
       </a>
     </Link>

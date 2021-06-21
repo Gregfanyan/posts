@@ -1,5 +1,4 @@
 import PostItem from "../PostItem";
-
 import Container from "../Container";
 
 function Posts({ posts }) {
