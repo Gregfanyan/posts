@@ -1,5 +1,5 @@
 .wrapper {
-  padding-top: 50px;
+  padding-top: 30px;
   min-width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);

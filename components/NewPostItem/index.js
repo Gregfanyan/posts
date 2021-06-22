@@ -6,7 +6,7 @@ function NewPostItem({ post }) {
     <Link href={`/post/${post.id}`} key={post.id}>
       <a>
         <h1>{post.title}</h1>
-        <Image src={post.image} alt="Post images" width={400} height={400} />
+        <Image src={post.image} alt="Post images" width={400} height={350} />
         <p>{post.description}</p>
       </a>
     </Link>

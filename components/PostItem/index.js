@@ -1,16 +1,18 @@
 import { Fragment } from "react";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Card from "../Card";
 
 function PostItem({ post }) {
   return (
-    <Link href={`/${post.id}`} passHref>
-      <Card>
+    <Card>
+      <FontAwesomeIcon icon="heart" size="3x" transform="shrink-4 right-130" color='grey' />
+      <Link href={`/${post.id}`} passHref>
         <h1>{post.title} &rarr;</h1>
-        <p>{post.body}</p>
-      </Card>
-    </Link>
+      </Link>
+      <p>{post.body}</p>
+    </Card>
   );
 }
 

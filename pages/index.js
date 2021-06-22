@@ -1,8 +1,12 @@
 import { Fragment } from "react";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 
 import Meta from "../components/Meta";
 import Posts from "../components/Posts";
 import { server } from "../config";
+
+config.autoAddCss = false;
 
 export default function Home({ posts }) {
   return (
