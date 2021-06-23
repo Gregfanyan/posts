@@ -1,6 +1,6 @@
 .container {
   margin-bottom: 10px;
-  max-height: 320px;
+  max-height: 370px;
   max-width: 90%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   overflow: auto;
@@ -13,7 +13,8 @@
   align-items: center;
   text-align: center;
   text-transform: capitalize;
-  padding: 10px;
+  padding: 0 10px;
+  margin: 0;
 }
 
 .container p {
@@ -21,9 +22,10 @@
   padding: 20px;
 }
 
-.container:hover,
-.container:focus,
-.container:active {
+
+.container h1:hover,
+.container h1:focus,
+.container h1:active {
   color: #0070f3;
   border-color: #0070f3;
 }
