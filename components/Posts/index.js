@@ -1,7 +1,7 @@
 import PostItem from "../PostItem";
 import Container from "../Container";
 
-function Posts({ posts, likeBtnHandleClick, likedList }) {
+function Posts({ posts, likeBtnHandleClick, likedList, unLikeBtnHandleClick }) {
   return (
     <Container>
       {posts.map((post) => (
@@ -10,6 +10,7 @@ function Posts({ posts, likeBtnHandleClick, likedList }) {
           post={post}
           likeBtnHandleClick={likeBtnHandleClick}
           isLiked={likedList.some((id) => id === post.id)}
+          unLikeBtnHandleClick={unLikeBtnHandleClick}
         />
       ))}
     </Container>

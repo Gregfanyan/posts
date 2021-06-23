@@ -30,10 +30,23 @@ export default function Home({ posts }) {
     });
   };
 
+  const unLikeBtnHandleClick = (id) => {
+    setLikedList((prev) => {
+      const filtered = prev.filter((filteredId) => filteredId !== id);
+      localforage.setItem("likedItem", filtered);
+      return filtered;
+    });
+  };
+
   return (
     <Fragment>
       <Meta />
-      <Posts posts={posts}  likeBtnHandleClick={likeBtnHandleClick} likedList={likedList} />
+      <Posts
+        posts={posts}
+        likeBtnHandleClick={likeBtnHandleClick}
+        likedList={likedList}
+        unLikeBtnHandleClick={unLikeBtnHandleClick}
+      />
     </Fragment>
   );
 }
