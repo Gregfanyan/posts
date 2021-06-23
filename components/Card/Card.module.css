@@ -14,12 +14,14 @@
   text-align: center;
   text-transform: capitalize;
   padding: 0 10px;
+  margin: 0;
 }
 
 .container p {
   text-align: justify;
   padding: 20px;
 }
+
 
 .container h1:hover,
 .container h1:focus,
