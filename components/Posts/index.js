@@ -1,4 +1,4 @@
-import PostItem from "../PostItem";
+/* import PostItem from "../PostItem";
 import Container from "../Container";
 
 function Posts({ posts, likeBtnHandleClick, likedList, unLikeBtnHandleClick }) {
@@ -13,6 +13,40 @@ function Posts({ posts, likeBtnHandleClick, likedList, unLikeBtnHandleClick }) {
           unLikeBtnHandleClick={unLikeBtnHandleClick}
         />
       ))}
+    </Container>
+  );
+}
+
+export default Posts;
+ */
+
+import PostItem from "../PostItem";
+import Container from "../Container";
+
+function Posts({
+  posts,
+  likeBtnHandleClick,
+  likedList,
+  unLikeBtnHandleClick,
+  nextBtn,
+  prevBtn,
+  resetBtn,
+  currentPost,
+}) {
+  return (
+    <Container>
+      <PostItem
+        key={posts[currentPost].id}
+        post={posts[currentPost]}
+        likeBtnHandleClick={likeBtnHandleClick}
+        isLiked={likedList.some((id) => id === posts[currentPost].id)}
+        unLikeBtnHandleClick={unLikeBtnHandleClick}
+        nextBtn={nextBtn}
+        prevBtn={prevBtn}
+        resetBtn={resetBtn}
+        currentPost={currentPost}
+        posts={posts}
+      />
     </Container>
   );
 }

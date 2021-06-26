@@ -11,6 +11,19 @@ config.autoAddCss = false;
 
 export default function Home({ posts }) {
   const [likedList, setLikedList] = useState([]);
+  const [currentPost, setCurrentPost] = useState(0);
+
+  const resetBtn = () => {
+    setCurrentPost(0);
+  };
+
+  const nextBtn = () => {
+    setCurrentPost((prev) => prev + 1);
+  };
+
+  const prevBtn = () => {
+    setCurrentPost((prev) => prev - 1);
+  };
 
   useEffect(() => {
     localforage.getItem("likedItem").then((val) => {
@@ -46,6 +59,10 @@ export default function Home({ posts }) {
         likeBtnHandleClick={likeBtnHandleClick}
         likedList={likedList}
         unLikeBtnHandleClick={unLikeBtnHandleClick}
+        resetBtn={resetBtn}
+        nextBtn={nextBtn}
+        prevBtn={prevBtn}
+        currentPost={currentPost}
       />
     </Fragment>
   );
