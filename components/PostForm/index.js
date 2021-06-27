@@ -43,6 +43,7 @@ function PostForm({ onAddPostHandler }) {
             onChange={onChange}
             value={title}
             name="title"
+            required
           />
           <label placeholder="">image</label>
           <input
@@ -51,6 +52,7 @@ function PostForm({ onAddPostHandler }) {
             onChange={onChange}
             value={image}
             name="image"
+            required
           />
           <label>description</label>
           <input
@@ -59,6 +61,7 @@ function PostForm({ onAddPostHandler }) {
             onChange={onChange}
             value={description}
             name="description"
+            required
           />
 
           <button type="submit" className={styles.button}>

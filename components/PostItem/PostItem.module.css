@@ -1,6 +1,32 @@
-.icon {
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   display: inline-block;
-  background-color: grey;
-  padding: 0;
-  margin: 0;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.buttonContainer button {
+  font-size: 20px;
+  padding: 10px;
+  margin-right: 1rem;
+  width: 6rem;
+  background-color: #34a94c;
+  border: none;
+  color: antiquewhite;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttonContainer button:first-child {
+  background-color: #fbfcfc;
+  border: 1px solid #34a94c;
+  color: #34a94c;
+}
+
+.buttonContainer button:disabled {
+  background-color: #ccf7db;
+  color: black;
+  cursor: not-allowed;
 }
