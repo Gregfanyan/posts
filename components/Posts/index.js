@@ -1,27 +1,11 @@
-/* import PostItem from "../PostItem";
-import Container from "../Container";
-
-function Posts({ posts, likeBtnHandleClick, likedList, unLikeBtnHandleClick }) {
-  return (
-    <Container>
-      {posts.map((post) => (
-        <PostItem
-          key={post.id}
-          post={post}
-          likeBtnHandleClick={likeBtnHandleClick}
-          isLiked={likedList.some((id) => id === post.id)}
-          unLikeBtnHandleClick={unLikeBtnHandleClick}
-        />
-      ))}
-    </Container>
-  );
-}
-
-export default Posts;
- */
-
 import PostItem from "../PostItem";
 import Container from "../Container";
+
+const PostStyle = {
+  display: "grid",
+  gridTemplateColumns: "repeat(1, 1fr)",
+  gridGap: "50px",
+};
 
 function Posts({
   posts,
@@ -34,7 +18,7 @@ function Posts({
   currentPost,
 }) {
   return (
-    <Container>
+    <Container style={PostStyle}>
       <PostItem
         key={posts[currentPost].id}
         post={posts[currentPost]}
