@@ -2,21 +2,15 @@ import React, { useState, useEffect } from "react";
 
 import ArticleItem from "../ArticleItem";
 import Container from "../Container";
+import useArticles from "../../hooks/useArticles";
 
 function ArticleList({ articles }) {
   const [search, setSearch] = useState("");
-  const [filteredArticle, setFilteredArticle] = useState([]);
+  const [filteredArticle] = useArticles(search, articles);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
-
-  useEffect(() => {
-    const filtered = articles.filter((article) =>
-      article.title.toLowerCase().includes(search.toLowerCase())
-    );
-    setFilteredArticle(filtered);
-  }, [search]);
 
   return (
     <div>
