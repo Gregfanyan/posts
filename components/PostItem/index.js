@@ -33,7 +33,7 @@ function PostItem({
         <FontAwesomeIcon
           icon="heart"
           size="3x"
-          transform="shrink-4 right-130"
+          transform="shrink-3 right-350"
           color={!isLiked ? "grey" : "black"}
           onClick={
             !isLiked
